@@ -13,11 +13,11 @@ public class ContatoController {
 
     //Método estático para adicionar alguns contatos
     static{
-        Contato contato = new Contato();
-        contato.setId("1");
-        contato.setNome("João");
-        contato.setTelefone("11 9999 8888");
-        LISTA_CONTATOS.add(contato);
+        LISTA_CONTATOS.add(new Contato("1", "Maria", "+55 11 9999 8888"));
+        LISTA_CONTATOS.add(new Contato("2", "Pedro", "+55 34 1111 2222"));
+        LISTA_CONTATOS.add(new Contato("3", "João", "+55  35 3333 0000"));
+        LISTA_CONTATOS.add(new Contato("4", "Nicolas", "+55 34 7777 8888"));
+        LISTA_CONTATOS.add(new Contato("5", "Whitney", "+55 34 6666 9923"));
     }
 
     //Criado método para invocar que no browser aparezca a página index
