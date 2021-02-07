@@ -9,6 +9,7 @@ import java.util.ArrayList;
 @Controller
 public class ContatoController {
 
+    //Este array funciona como um banco de datos que guarda as informações dos contatos
     private static final ArrayList<Contato>  LISTA_CONTATOS = new ArrayList<>();
 
     //Método estático para adicionar alguns contatos
@@ -23,9 +24,15 @@ public class ContatoController {
     //Criado método para invocar que no browser aparezca a página index
     //@ @GetMapping Configura que o framework saiba qual enderereço digitado no browser
     // vai disparar este método e renderizar a p[agina no browser
+    //Isto é também o mapeamento da requisicão raíz
     @GetMapping("/")
     public String index(){
         return "index";
+    }
+
+    @GetMapping("/contatos")
+    public String listar(){
+        return "listar";
     }
 
 }
