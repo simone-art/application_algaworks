@@ -9,9 +9,22 @@ public class Contato {
     private String nome;
     private String telefone;
 
+    //Constructor da classe Contato sem implementação chama o método new Contato
+    //Não é neccesário colocá-lo
+    public Contato(){
+
+    }
+
+    //Este constructor suprime o que esta encima, e éste sim pode ser usado
+    //This = indica para o Java que o id faz a referência da instância e não para o parámetro
+    //Constructor específico que recebe todos os parámetros da classe Contato
+    public Contato(String id, String nome, String telefone) {
+        this.id = id;
+        this.nome = nome;
+        this.telefone = telefone;
+    }
+
     //Encapsulamento com o Get o Setter
-
-
     public String getId() {
         return id;
     }
