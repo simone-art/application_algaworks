@@ -3,6 +3,7 @@ package com.algaworks.algaworks.controller;
 import com.algaworks.algaworks.Contato;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 
@@ -30,9 +31,12 @@ public class ContatoController {
         return "index";
     }
 
+    //new ModelAndView("listar"); listar é a p[agina html listar
     @GetMapping("/contatos")
-    public String listar(){
-        return "listar";
+    public ModelAndView listar(){
+        ModelAndView mv = new ModelAndView("listar");
+        mv.addObject("contatos", LISTA_CONTATOS);
+        return mv;
     }
 
 }
